@@ -1,6 +1,17 @@
 Command &amp; Conquer - HTML5
 =============================
 
+## Merged Final Notes
+
+This folder is the merged final package assembled from the two source trees in the parent directory.
+
+- `index.html` is the primary playable build. It uses the complete `emupedia` runtime because that is the only self-contained version that still runs cleanly.
+- `debug.html` is wired to the compatible `v0.3d` legacy script so the older milestone can still be launched.
+- `refactor.html` runs the modular refactor bundle against the merged assets.
+- `refactor-source/` preserves the TypeScript refactor from `command-and-conquer-develop` for future work without breaking the shipped build.
+- The current refactor stabilization pass fixed several runtime issues in that modular build: turret obstruction marking, health/max-health comparisons, refinery harvester HP transfers, missing infantry drawing, factory HP initialization, and the debug-grid highlight crash.
+- Run this folder over HTTP instead of opening files directly, for example: `python3 -m http.server 8000`
+
 ## About
 
 This is a recreation of the original Command and Conquer, Real Time Strategy game entirely in HTML5 and Javascript.

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Command and Conquer - Refactor Preview</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="shortcut icon" href="favicon.ico">
+    <style type="text/css">
+        body {
+            background: black;
+            color: white;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            margin: 0;
+        }
+
+        canvas {
+            border: 1px solid white;
+            cursor: url(images/cursors/blank.gif), none !important;
+            background-image: url(images/loading.gif), url(images/htitle.jpeg);
+            background-position: center bottom, center;
+            background-repeat: no-repeat, no-repeat;
+        }
+
+        #debugger {
+            border: 1px solid white;
+            font-size: 12px;
+            padding: 5px;
+            overflow: auto;
+            height: 400px;
+        }
+
+        @font-face {
+            font-family: 'Command and Conquer';
+            src: url('images/sidebar/cnc.ttf');
+        }
+
+        #leftcontent {
+            float: left;
+            width: 450px;
+            padding: 10px;
+            text-align: left;
+            box-sizing: border-box;
+        }
+
+        #rightcontent {
+            float: left;
+            width: 660px;
+            padding: 10px;
+            text-align: left;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            color: yellow;
+            text-align: left;
+            margin: 0 0 12px;
+        }
+
+        p,
+        li {
+            line-height: 1.5;
+        }
+
+        .note {
+            color: #9acd32;
+        }
+
+        .links a,
+        a {
+            color: #8fd3ff;
+        }
+    </style>
+    <script src="js/library/jquery-2.2.0.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/refactor-app.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+    <div id="leftcontent">
+        <img style="float:left;" src="images/logo.jpg" width="400" height="146" alt="Command and Conquer">
+        <h1>
+            C&amp;C Refactor Preview
+        </h1>
+        <p class="note">This entry runs the modular refactor bundled from <code>refactor-source/js/App.js</code> against the merged asset set.</p>
+        <p>This version is for port validation. The main playable release with menus remains <a href="index.html">index.html</a>.</p>
+        <p class="links"><a href="debug.html">Legacy debug build</a></p>
+        <div id="debugger">
+            Debugging off.
+        </div>
+    </div>
+    <div id="rightcontent">
+        <canvas id="canvas" width="640" height="535">
+            Your browser does not support the HTML5 Canvas feature.
+        </canvas>
+
+        <div id="specialcontrols">
+            <label for="debug_mode">Debug Mode: </label><input type="checkbox" name="debug_mode" id="debug_mode">
+        </div>
+
+        <div id="featuresdiv">
+            <p>
+                Current goal:
+            </p>
+            <ul>
+                <li>Run the refactored engine with the merged game assets.</li>
+                <li>Keep this entry isolated until feature parity is clear.</li>
+                <li>Use this page as the handoff point for future refactor fixes.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
